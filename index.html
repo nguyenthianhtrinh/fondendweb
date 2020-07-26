@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <base href="http://www.codepedant.com/joomla/bemax/bemax-demo/">
+    <meta name="generator" content="Joomla! - Open Source Content Management">
+    <title>DoAn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dismissButton {
+            background-color: #fff;
+            border: 1px solid #dadce0;
+            color: #1a73e8;
+            border-radius: 4px;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            height: 36px;
+            cursor: pointer;
+            padding: 0 24px
+        }
+
+        .dismissButton:hover {
+            background-color: rgba(66, 133, 244, 0.04);
+            border: 1px solid #d2e3fc
+        }
+
+        .dismissButton:focus {
+            background-color: rgba(66, 133, 244, 0.12);
+            border: 1px solid #d2e3fc;
+            outline: 0
+        }
+
+        .dismissButton:hover:focus {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd
+        }
+
+        .dismissButton:active {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)
+        }
+
+        .dismissButton:disabled {
+            background-color: #fff;
+            border: 1px solid #f1f3f4;
+            color: #3c4043
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-mtc label,
+        .gm-style .gm-style-mtc div {
+            font-weight: 400
+        }
+    </style>
+    <style>
+        .gm-control-active>img {
+            box-sizing: content-box;
+            display: none;
+            left: 50%;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .gm-control-active>img:nth-child(1) {
+            display: block
+        }
+
+        .gm-control-active:hover>img:nth-child(1),
+        .gm-control-active:active>img:nth-child(1) {
+            display: none
+        }
+
+        .gm-control-active:hover>img:nth-child(2),
+        .gm-control-active:active>img:nth-child(3) {
+            display: block
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700">
+<style>
+    .gm-ui-hover-effect {
+        opacity: .6
+    }
+
+    .gm-ui-hover-effect:hover {
+        opacity: 1
+    }
+</style>
+<style>
+    .gm-style .gm-style-cc span,
+    .gm-style .gm-style-cc a,
+    .gm-style .gm-style-mtc div {
+        font-size: 10px;
+        box-sizing: border-box
+    }
+</style>
+<style>
+    @media print {
+
+        .gm-style .gmnoprint,
+        .gmnoprint {
+            display: none
+        }
+    }
+
+    @media screen {
+
+        .gm-style .gmnoscreen,
+        .gmnoscreen {
+            display: none
+        }
+    }
+</style>
+<style>
+    .gm-style-pbc {
+        transition: opacity ease-in-out;
+        background-color: rgba(0, 0, 0, 0.45);
+        text-align: center
+    }
+
+    .gm-style-pbt {
+        font-size: 22px;
+        color: white;
+        font-family: Roboto, Arial, sans-serif;
+        position: relative;
+        margin: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+</style>
+<style>
+    .gm-style img {
+        max-width: none;
+    }
+
+    .gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+    }
+</style>
+<style>
+    #wrap-contact-form115 .rf_submit {
+        background: #f24259;
+    }
+
+    #wrap-contact-form115 .rf_submit:hover {
+        background: #ffffff;
+    }
+
+    #wrap-contact-form115 .sscf-popup {
+        background: #f24259;
+    }
+
+    #wrap-contact-form115 .sscf-popup:hover {
+        background: #ffffff;
+    }
+
+    #wrap-contact-form115 .success {
+        color: #f24259 !important;
+    }
+</style>
+
+
+<!-- Link -->
+<link rel="stylesheet" href="/joomla/bemax/bemax-demo/templates/bemax/css/plugins.css">
+<link rel="stylesheet" href="/joomla/bemax/bemax-demo/templates/bemax/css/style.css">
+<link rel="stylesheet" href="/joomla/bemax/bemax-demo/templates/bemax/css/custom.css">
+
+</head>
+
+
+<body>
+    <!-- ====== Header ====== -->
+    <div class="loading" style="display: none;">
+        <div class="text-center middle">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- ====== Navgition ======  -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <a class="logo" href="">
+                <img class="logo-first"  src=""
+                    alt="Bemax"> <img class="logo-second"
+                    src="./public/imager/logo-dark.png" alt="Bemax"> </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ml-auto ">
+                    <li class="item-101 active nav-item deeper dropdown parent"><a href="#">Home
+                            <i class="fa fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="item-114"><a href="/joomla/bemax/bemax-demo/homepage/particles">Particles</a>
+                            </li>
+                            <li class="item-115"><a href="#">Creative</a></li>
+                            <li class="item-116"><a href="#">BG-Video</a></li>
+                            <li class="item-117"><a href="#">Slider</a></li>
+                            <li class="item-118"><a href="#">Slider-Text</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-108"> <a class="btn-scroll" href="#about">About</a></li>
+                    <li class="item-109"> <a class="btn-scroll" href="#portfolio">Portfolio</a></li>
+                    <li class="item-110"> <a class="btn-scroll" href="#services">Services</a></li>
+                    <li class="item-111"> <a class="btn-scroll" href="#price">Price</a></li>
+                    <li class="item-112 deeper dropdown parent"> <a class="btn-scroll" href="#blog">Blog <i
+                                class="fa fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="item-133"><a href="">Blog List</a></li>
+                        </ul>
+                    </li>
+                    <li class="item-113"> <a class="btn-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- ====== Container ======  -->
+    <div class="moduletable">
+        <header id="home" class=" header valign bg-img" data-scroll-index="0" data-overlay-dark="5"
+            style="background-image: url(&quot;/joomla/bemax/bemax-demo/images/bg.jpg&quot;); background-position: 0px 0px;"
+            data-stellar-background-ratio="0.5">
+
+
+
+            <div class="container">
+                <div class="row">
+                    <!-- caption -->
+                    <div class="full-width text-center caption mt-30">
+                        <h3>We Are Creative</h3>
+                        <h1 class="cd-headline clip">
+                            <span class="blc">The Way Of </span>
+                            <span class="cd-words-wrapper" style="width: 325.052px; overflow: hidden;">
+                                <b class="is-visible">Success</b>
+                                <b class="is-hidden">Grow Up</b>
+                                <b class="is-hidden">Dream</b>
+                            </span>
+                        </h1>
+
+                        <p>A single place to share, curate and discover visual that tells a story.</p>
+                        <a href="#" class="butn butn-bord">
+                            <span>Learn More</span>
+                        </a>
+                        <a href="#" class="butn butn-bg">
+                            <span>Get Started</span>
+                        </a>
+                    </div>
+                    <!-- end caption -->
+                </div>
+            </div><!-- /container -->
+            <div class="arrow">
+                <a href="#" data-scroll-nav="1" class="">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+    </div>
+    <div class="moduletable">
+
+        <section id="about" class=" hero section-padding pb-0">
+            <div class="container">
+                <div class="row">
+
+                    <div class="offset-lg-2 col-lg-8 text-center mb-80">
+                        <h4 class="extra-text">We Are <span>Awesome</span> Agency.</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!-- content -->
+                    <div class="col-lg-7">
+                        <div class="mission">
+                            <div class="section-head mb-30">
+                                <h4><span>Our</span><br> Mission</h4>
+                            </div>
+                            <p>We’re full service which means we’ve got you covered on design and content right through
+                                to digital. You’ll form a lasting relationship with us, collaboration is central to
+                                everything we do. We’ll push you out of your comfort zone from time-to-time, but this is
+                                where you’ll shine. Bottom line is we want you to succeed at Faculty We’re full service
+                                which means we’ve got you covered on design and content right through to digital.</p>
+
+                            <a class="vid" href="">
+                                <i class="icofont icofont-ui-play"></i>
+                                <span class="small-text">Watch our Story</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <!-- skills progress -->
+                        <div class="skills">
+                            <div class="prog-item">
+                                <p>Web Design</p>
+                                <div class="skills-progress"><span data-value="95%" style="width: 95%;"></span></div>
+                            </div>
+
+                            <div class="prog-item">
+                                <p>Branding</p>
+                                <div class="skills-progress"><span data-value="80%" style="width: 80%;"></span></div>
+                            </div>
+
+                            <div class="prog-item">
+                                <p>Developement</p>
+                                <div class="skills-progress"><span data-value="90%" style="width: 90%;"></span></div>
+                            </div>
+
+                            <div class="prog-item">
+                                <p>Marketing</p>
+                                <div class="skills-progress"><span data-value="67%" style="width: 67%;"></span></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section>
+    </div>
+    <div class="moduletable">
+
+
+        <div class="custom">
+            <section class="hero feat bg-gray pt-80 pb-50 mt-80">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="item">
+                                <span class="icon"><i class="icofont icofont-brand-copy"></i></span>
+                                <h6>Branding</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem
+                                    Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="item">
+                                <span class="icon"><i class="icofont icofont-chart-pie-alt"></i></span>
+                                <h6>Development</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem
+                                    Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="item">
+                                <span class="icon"><i class="icofont icofont-chart-histogram-alt"></i></span>
+                                <h6>Marketing</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem
+                                    Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+
+</body>
+</html>
